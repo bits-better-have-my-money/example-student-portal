@@ -1,0 +1,2 @@
+### Users Index
+GET http://localhost:3000/users?limit=5&offset=5
