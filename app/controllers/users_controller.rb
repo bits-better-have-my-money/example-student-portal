@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    users = User.where(role_id: 1)
+    users = User.includes(:cohort, :submissions).where(role_id: 1)
       .limit(params[:limit])
       .offset(params[:offset])
     render json: users
